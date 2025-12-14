@@ -1,6 +1,8 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
+
 
 export const metadata = {
   title: "Nyaya Physiotherapy Clinic",
@@ -17,6 +19,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>

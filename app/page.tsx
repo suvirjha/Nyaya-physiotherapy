@@ -40,10 +40,8 @@ export default function Home() {
         />
       </Head>
 
-      <main className="w-full">
-      <main className="pt-24">
-
-
+      {/* SINGLE MAIN WRAPPER */}
+      <main className="w-full pt-24 bg-[#fffaf0]">
         {/* ===== HERO ===== */}
         <section className="relative h-screen flex items-center justify-center bg-[#fffaf0] px-4">
           <div className="relative w-full max-w-[90%] h-[90%] rounded-2xl overflow-hidden shadow-xl">
@@ -65,10 +63,16 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-600 transition">
+                <Link
+                  href="/contact"
+                  className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-600 transition"
+                >
                   Book Appointment
                 </Link>
-                <Link href="/services" className="border border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition">
+                <Link
+                  href="/services"
+                  className="border border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
+                >
                   Explore Services
                 </Link>
               </div>
@@ -89,32 +93,30 @@ export default function Home() {
             </p>
           </div>
         </section>
-        {/* ===== Services ===== */}
+
+        {/* ===== SERVICES ===== */}
         <section className="py-20 px-4 bg-[#fffaf0]">
-         <h2 className="text-3xl font-bold text-center mb-12 text-black">
-          Our Key Services
-         </h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">
+            Our Key Services
+          </h2>
 
-         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {["Pain Relief", "Sports Rehab", "Posture Care", "Mobility Training"].map(
-           (title, i) => (
-            <div key={i} className="rounded-xl overflow-hidden shadow-lg">
-             {/* IMAGE */}
-             <img
-              src={`/images/service${i + 1}.jpg`}
-              className="w-full h-64 object-cover rounded-t-xl"
-              alt={title}
-             />
-             {/* TEXT BELOW IMAGE */}
-             <div className="p-4 text-center text-black font-bold text-xl rounded-md" style={{ backgroundColor: "#fff4d4" }}>
-              {title}
-             </div>
-            </div>
-           )
-          )}
-         </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {["Pain Relief", "Sports Rehab", "Posture Care", "Mobility Training"].map(
+              (title, i) => (
+                <div key={i} className="rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src={`/images/service${i + 1}.jpg`}
+                    className="w-full h-64 object-cover"
+                    alt={title}
+                  />
+                  <div className="p-4 text-center text-black font-bold text-xl bg-[#fff4d4]">
+                    {title}
+                  </div>
+                </div>
+              )
+            )}
+          </div>
         </section>
-
 
         {/* ===== TESTIMONIALS ===== */}
         <section className="py-20 px-4 bg-[#fff4d4]">
@@ -127,20 +129,27 @@ export default function Home() {
               <p className="text-lg md:text-xl font-serif mb-4 text-black">
                 “{testimonials[index].text}”
               </p>
-              <h3 className="font-bold text-black">{testimonials[index].name}</h3>
+              <h3 className="font-bold text-black">
+                {testimonials[index].name}
+              </h3>
             </div>
 
             <div className="flex justify-center gap-6 mt-8">
-              <button onClick={prev} className="bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-600">
+              <button
+                onClick={prev}
+                className="bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-600"
+              >
                 ←
               </button>
-              <button onClick={next} className="bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-600">
+              <button
+                onClick={next}
+                className="bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-600"
+              >
                 →
               </button>
             </div>
           </div>
         </section>
-
       </main>
     </>
   );

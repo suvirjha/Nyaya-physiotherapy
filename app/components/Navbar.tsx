@@ -19,16 +19,16 @@ export default function Navbar() {
 
         {/* DESKTOP MENU */}
         <div className="hidden md:flex space-x-8 text-white font-medium">
-          <Link href="/" className="hover:text-yellow-400 transition">
+          <Link href="/" className="hover:text-yellow-400 transition text-black">
             Home
           </Link>
-          <Link href="/services" className="hover:text-yellow-400 transition">
+          <Link href="/services" className="hover:text-yellow-400 transition text-black">
             Services
           </Link>
-          <Link href="/price_list" className="hover:text-yellow-400 transition">
+          <Link href="/price_list" className="hover:text-yellow-400 transition text-black">
             Price List
           </Link>
-          <Link href="/contact" className="hover:text-yellow-400 transition">
+          <Link href="/contact" className="hover:text-yellow-400 transition text-black">
             Contact
           </Link>
         </div>

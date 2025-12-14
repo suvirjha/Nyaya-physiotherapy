@@ -18,6 +18,7 @@ export default function PriceList() {
   ];
 
   return (
+    <main className="pt-24">
     <main className="min-h-screen w-full bg-[#fffaf0] py-20 px-6">
       {/* Page Header */}
       <div className="text-center mb-16">
