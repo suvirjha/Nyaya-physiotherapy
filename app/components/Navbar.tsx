@@ -7,12 +7,12 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full fixed top-0 left-0 z-50 bg-black">
+    <header className="w-full fixed top-0 left-0 z-50 bg-[#fff4d4]">
       <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         
         {/* LOGO */}
         <Link href="/">
-          <span className="text-white text-2xl md:text-3xl font-serif font-bold tracking-wide">
+          <span className="text-black text-2xl md:text-3xl font-serif font-bold tracking-wide">
             Nyaya Physiotherapy
           </span>
         </Link>

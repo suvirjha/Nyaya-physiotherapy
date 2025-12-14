@@ -41,6 +41,8 @@ export default function Home() {
       </Head>
 
       <main className="w-full">
+      <main className="pt-24">
+
 
         {/* ===== HERO ===== */}
         <section className="relative h-screen flex items-center justify-center bg-[#fffaf0] px-4">
@@ -89,7 +91,7 @@ export default function Home() {
         </section>
         {/* ===== Services ===== */}
         <section className="py-20 px-4 bg-[#fffaf0]">
-         <h2 className="text-3xl md:text-black font-bold text-center mb-12">
+         <h2 className="text-3xl md:text-black md:text-black font-bold text-center mb-12">
           Our Key Services
          </h2>
 
