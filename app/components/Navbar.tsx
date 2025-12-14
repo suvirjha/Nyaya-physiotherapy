@@ -1,34 +1,65 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav className="w-full bg-[#fff4d4] shadow-md py-4 px-6 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
+    <header className="w-full fixed top-0 left-0 z-50 bg-black">
+      <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         
         {/* LOGO */}
-        <Link href="/" className="text-2xl md:text-3xl font-serif font-bold text-black">
-          Nyaya Physiotherapy clinic
+        <Link href="/">
+          <span className="text-white text-2xl md:text-3xl font-serif font-bold tracking-wide">
+            Nyaya Physiotherapy
+          </span>
         </Link>
 
-        {/* NAV LINKS */}
-        <div className="flex gap-8 text-lg">
-          <Link href="/" className="text-black font-medium hover:text-yellow-600 transition">
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex space-x-8 text-white font-medium">
+          <Link href="/" className="hover:text-yellow-400 transition">
             Home
           </Link>
-
-          <Link href="/services" className="text-black font-medium hover:text-yellow-600 transition">
+          <Link href="/services" className="hover:text-yellow-400 transition">
             Services
           </Link>
-
-          <Link href="/price_list" className="text-black font-medium hover:text-yellow-600 transition">
+          <Link href="/price_list" className="hover:text-yellow-400 transition">
             Price List
           </Link>
-
-          <Link href="/contact" className="text-black font-medium hover:text-yellow-600 transition">
+          <Link href="/contact" className="hover:text-yellow-400 transition">
             Contact
           </Link>
         </div>
-      </div>
-    </nav>
+
+        {/* MOBILE MENU BUTTON */}
+        <button
+          className="md:hidden text-white text-3xl"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </nav>
+
+      {/* MOBILE MENU */}
+      {open && (
+        <div className="md:hidden bg-black px-6 py-6 space-y-5 text-white font-medium">
+          <Link href="/" onClick={() => setOpen(false)} className="block hover:text-yellow-400">
+            Home
+          </Link>
+          <Link href="/services" onClick={() => setOpen(false)} className="block hover:text-yellow-400">
+            Services
+          </Link>
+          <Link href="/price_list" onClick={() => setOpen(false)} className="block hover:text-yellow-400">
+            Price List
+          </Link>
+          <Link href="/contact" onClick={() => setOpen(false)} className="block hover:text-yellow-400">
+            Contact
+          </Link>
+        </div>
+      )}
+    </header>
   );
 }
