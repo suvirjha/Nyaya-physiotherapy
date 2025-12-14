@@ -1,7 +1,7 @@
 export default function ContactPage() {
   return (
-    <main className="pt-24">
-    <main className="min-h-screen w-full bg-[#fff4d4] py-20 px-6 flex justify-center">
+    
+    <main className="min-h-screen w-full bg-[#fff4d4] py-20 px-6 flex justify-center pt-24">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
 
         {/* LEFT SIDE — CONTACT INFO */}
