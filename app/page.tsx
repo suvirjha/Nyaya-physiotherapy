@@ -91,7 +91,7 @@ export default function Home() {
         </section>
         {/* ===== Services ===== */}
         <section className="py-20 px-4 bg-[#fffaf0]">
-         <h2 className="text-3xl md:text-black md:text-black font-bold text-center mb-12">
+         <h2 className="text-3xl font-bold text-center mb-12 text-black">
           Our Key Services
          </h2>
 
